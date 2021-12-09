@@ -14,7 +14,7 @@ public class topolovec_lab13 {
 			while ((inn = input.readLine()) != null ) {
 				StringTokenizer st = new StringTokenizer(inn, " ");
 				while (st.hasMoreTokens()) {
-					a.add(Integer.valueOf(inn));
+					a.add(Integer.valueOf(st.nextToken()));
 				}
 			}
 			input.close();
@@ -36,7 +36,7 @@ public class topolovec_lab13 {
 		return a.stream().distinct().filter(x -> x > 5).count();
 	}
 	public Integer[] getResult1() {
-		return a.stream().filter(x -> x > 5).filter(x -> x < 50).sorted().toArray(Integer[]::new);
+		return a.stream().filter(x -> x % 2 == 0).filter(x -> x > 5).filter(x -> x < 50).sorted().toArray(Integer[]::new);
 	}
 	public Integer[] getResult2() {
 		return a.stream().limit(50).map(x -> x * x * 3).toArray(Integer[]::new);

@@ -57,17 +57,25 @@ public class topolovec_lab13Test
 			
 			// put code here to populate expectedResult1 with the values in testData.get(0)
 			// so that you can use "assertArrayEquals" to verify expectedResult1 and lab.getResult1() are the same
-			expectedResult1 = (Integer[]) testData.get(0).toArray();
-			
+			expectedResult1 = new Integer[testData.get(0).size()];
+			for (int i = 0; i < testData.get(0).size(); i++) {
+				expectedResult1[i] = testData.get(0).get(i);
+			}
 			
 			// put code here to populate expectedResult2 with the values in testData.get(1)
 			// so that you can use "assertArrayEquals" to verify expectedResult2 and lab.getResult2() are the same
-			expectedResult2 = (Integer[]) testData.get(1).toArray();
+			expectedResult2 = new Integer[testData.get(1).size()];
+			for (int i = 0; i < testData.get(1).size(); i++) {
+				expectedResult2[i] = testData.get(1).get(i);
+			}
 			
 			
 			// put code here to populate expectedResult3 with the values in testData.get(2)
 			// so that you can use "assertArrayEquals" to verify expectedResult3 and lab.getResult3() are the same
-			expectedResult3 = (Integer[]) testData.get(2).toArray();
+			expectedResult3 = new Integer[testData.get(2).size()];
+			for (int i = 0; i < testData.get(2).size(); i++) {
+				expectedResult3[i] = testData.get(2).get(i);
+			}
 			
 		}
 		catch(Exception e)
